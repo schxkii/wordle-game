@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Wordle Game</h1>
+        <div id="board"></div>
+        <input type="text" id="guess-input" maxlength="5" placeholder="Enter your guess">
+        <button id="submit-guess">Submit Guess</button>
+        <div id="message"></div>
+        <footer>
+            <p>Made with ❤️ by schxkii <a href=""></a></p>
+        </footer>
+    </div>
+    <script src="src/data/words.js"></script>
+    <script src="src/js/utils.js"></script>
+    <script src="src/js/game.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+</html>

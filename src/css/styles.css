@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121213;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 30px;
+    width: 350px;
+    margin: 0 auto 30px auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.tile {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #3a3a3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #121213;
+    color: white;
+}
+
+.tile.filled {
+    border-color: #565758;
+}
+
+.tile.correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+    color: white;
+}
+
+.tile.present {
+    background-color: #c9b458;
+    border-color: #c9b458;
+    color: white;
+}
+
+.tile.absent {
+    background-color: #787c7e;
+    border-color: #787c7e;
+    color: white;
+}
+
+#guess-input {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #3a3a3c;
+    border-radius: 5px;
+    background-color: #121213;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#guess-input:focus {
+    outline: none;
+    border-color: #565758;
+}
+
+#submit-guess {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    background-color: #6aaa64;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit-guess:hover {
+    background-color: #5a9a54;
+}
+
+#submit-guess:disabled {
+    background-color: #3a3a3c;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    min-height: 30px;
+    font-weight: bold;
+}
+
+.message-win {
+    color: #6aaa64;
+}
+
+.message-lose {
+    color: #f5793a;
+}
+
+.message-error {
+    color: #e06c75;
+}
